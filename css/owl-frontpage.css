@@ -1,0 +1,8 @@
+.owl-featured-image{
+  width: 100%;
+  height: 250px;
+}
+
+.views-field-field-slideshow-image .field-content > img {
+  max-height: 400px;
+}
