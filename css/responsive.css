@@ -43,6 +43,9 @@
     #site-navigation-wrap{
       border-radius: 0px;
     }
+    #site-navigation .block-islandora-solr-simple-header{
+      display: none;
+    }
 }
 
 /* Tablet (Portrait)
@@ -63,8 +66,11 @@
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
     }
-        #site-navigation-wrap{
+    #site-navigation-wrap{
       border-radius: 0px;
+    }
+    #site-navigation .block-islandora-solr-simple-header{
+      display: none;
     }
 }
 
@@ -92,8 +98,11 @@
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
     }
-        #site-navigation-wrap{
+    #site-navigation-wrap{
       border-radius: 0px;
+    }
+    #site-navigation .block-islandora-solr-simple-header{
+      display: none;
     }
 }
 /* Mobile (Landscape)
@@ -113,7 +122,10 @@
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
     }
-        #site-navigation-wrap{
+    #site-navigation-wrap{
       border-radius: 0px;
+    }
+    #site-navigation .block-islandora-solr-simple-header{
+      display: none;
     }
 }

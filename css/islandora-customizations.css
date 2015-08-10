@@ -1,0 +1,77 @@
+.block-islandora-solr-simple-header {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#islandora-solr-simple-search-form .form-text{
+  border-radius: 5px;
+}
+
+nav{
+  display: table;
+  width: 100%;
+}
+
+.solr-fields dt, .solr-fields dd {
+  word-wrap: break-word;
+}
+
+nav #edit-submit {
+  display: none;
+}
+
+.block.block-islandora-solr.contextual-links-region {
+  float: right;
+}
+
+#navigation-toggle{
+  text-transform: uppercase;
+}
+
+.front #block-system-main, .front .page-title{
+  display: none;
+}
+
+.search-wrapper #edit-submit{
+  display: none;
+}
+
+.search-wrapper {
+  display: table;
+  width: 100%;
+}
+
+.search-wrapper {
+  width: auto;
+  display: block;
+  float: right;
+  height: 100%;
+  margin-bottom: auto;
+  margin-right: 10px;
+  margin-top: 3%;
+  vertical-align: middle;
+}
+
+.role-user-not-logged-in{
+  background-color: #ffffcc;
+}
+
+.role-user-logged-in{
+  background-color: #ffffcc;
+}
+
+.role-user-logged-in-admin{
+  background-color: white;
+}
+
+.role-user-logged-in-depositor{
+  background-color: lightgray;
+}
+
+.role-user-logged-in-superuser{
+  background-color: white;
+}
+
+#site-navigation #main-menu > ul li {
+  line-height: 55px !important;
+}

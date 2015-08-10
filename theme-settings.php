@@ -78,4 +78,18 @@ function ailla_form_system_theme_settings_alter(&$form, &$form_state) {
     '#default_value' => theme_get_setting('pinterest_url', 'ailla'),
     '#description'   => t("Enter your Pinterest URL. Leave blank to hide."),
   );
+  // Custom AILLA theme settings.
+  $form['ailla_settings_custom'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Custom ailla Theme Settings'),
+    '#collapsible' => FALSE,
+    '#collapsed' => FALSE,
+  );
+  $form['ailla_settings_custom']['slideshow_bg_datastream'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Slideshow Background Datastream'),
+    '#default_value' => theme_get_setting('slideshow_bg_datastream', 'ailla'),
+    '#description'   => t("The datastream to use on the frontpage slideshow (EX: 'TN', 'OBJ', etc..)."),
+  );
+  
 }

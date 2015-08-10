@@ -67,7 +67,7 @@
  * @see template_process()
  */
 ?>
-<div id="wrap" class="clr container">
+<div id="wrap" class="clr container <?php print $wrap_class; ?>">
   <div id="header-wrap" class="clr fixed-header">
     <header id="header" class="site-header clr">
      <?php if ($page['header']): ?>
@@ -77,11 +77,14 @@
       <?php endif; ?>
       <div id="logo" class="clr">
         <?php if (theme_get_setting('image_logo','ailla')): ?>
-        <?php if ($logo): ?><div id="site-logo"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+        <?php if ($logo): ?>
+        <div id="site-logo"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
         <img src="<?php print base_path() . drupal_get_path('theme', 'ailla') . '/images/head.gif'; ?>" alt="<?php print t('Home'); ?>" />
+
         </div>
+
         <?php endif; ?>
 
         <?php if ($site_slogan): ?><div id="site-slogan"><?php print $site_slogan; ?></div><?php endif; ?>
@@ -105,10 +108,13 @@
     <nav id="site-navigation" class="navigation main-navigation clr" role="navigation">
       <div id="main-menu" class="menu-main-container">
         <?php
-          $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+          $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'menu-browse'));
           print drupal_render($main_menu_tree);
         ?>
       </div>
+      <?php if (isset($islandora_search)): ?>
+        <div class="block-islandora-solr-simple-header"><?php print $islandora_search; ?></div>
+      <?php endif; ?>
     </nav>
   </div>
 

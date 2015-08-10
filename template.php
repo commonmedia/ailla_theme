@@ -9,6 +9,12 @@ function ailla_html_head_alter(&$head_elements) {
   );
 }
 
+function ailla_form_islandora_solr_simple_search_form_alter(&$form, &$form_state, $form_id) {
+  $form['simple']['islandora_simple_search_query']['#attributes']['placeholder'] = t("Search Repository");
+  $form['simple']['islandora_simple_search_query']['#attributes']['size'] = 14;
+  $form['simple']['islandora_simple_search_query']['#field_suffix'] = "<i title='Search' class='fa fa-search'></i>";
+}
+
 /**
  * Insert themed breadcrumb page navigation at top of the node content.
  */
@@ -28,6 +34,34 @@ $breadcrumb[] = drupal_get_title();
  * Override or insert variables into the page template.
  */
 function ailla_preprocess_page(&$vars) {
+  $vars['wrap_class'] = 'role-user-not-logged-in';
+  if (user_is_logged_in()) {
+    global $user;
+    $vars['wrap_class'] = 'role-user-logged-in';
+    if (in_array('depositor', $user->roles)) {
+      $vars['wrap_class'] = 'role-user-logged-in-depositor';
+    }
+    if (in_array('admin', $user->roles)) {
+      $vars['wrap_class'] = 'role-user-logged-in-admin';
+    }
+    if (in_array('superuser', $user->roles)) {
+      $vars['wrap_class'] = 'role-user-logged-in-superuser';
+    }
+  }
+
+  if (module_exists('islandora_solr')) {
+    module_load_include('inc', 'islandora_solr', 'includes/blocks');
+    $block = block_load('islandora_solr', 'simple');
+    $block->{'title'} = "<none>";
+    $block_rendered = _block_get_renderable_array(
+      _block_render_blocks(
+        array(
+          $block
+        )
+      )
+    );
+  $vars['islandora_search'] = render($block_rendered);
+  }
   if (isset($vars['main_menu'])) {
     $vars['main_menu'] = theme('links__system_main_menu', array(
       'links' => $vars['main_menu'],
