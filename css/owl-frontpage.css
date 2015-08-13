@@ -6,3 +6,15 @@
 .views-field-field-slideshow-image .field-content > img {
   max-height: 400px;
 }
+.page-node #content-wrap img{
+  width: auto;
+}
+
+.views-field.views-field-field-slideshow-image {
+  background-color: white;
+  text-align: center;
+}
+
+.page-node #content-wrap img{
+  border: none !important;
+}
