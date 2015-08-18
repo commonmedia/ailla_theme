@@ -67,7 +67,7 @@
  * @see template_process()
  */
 ?>
-<div id="wrap" class="clr container <?php print $wrap_class; ?>">
+<div id="wrap" class="clr container">
   <div id="header-wrap" class="clr fixed-header">
     <header id="header" class="site-header clr">
      <?php if ($page['header']): ?>
@@ -103,7 +103,7 @@
   </div>
 
   <div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close"></a></div>
-  <div id="site-navigation-wrap">
+  <div id="site-navigation-wrap" class="<?php print $wrap_class; ?>">
     <a href="#sidr-main" id="navigation-toggle"><span class="fa fa-bars"></span>Menu</a>
     <nav id="site-navigation" class="navigation main-navigation clr" role="navigation">
       <div id="main-menu" class="menu-main-container">
@@ -145,7 +145,7 @@
   <?php endif; ?>
 
 
-  <div id="main" class="site-main clr">
+  <div id="main" class="site-main clr <?php print $wrap_class; ?>">
     <?php $sidebarclass = ""; if($page['sidebar_first']) { $sidebarclass="left-content"; } ?>
     <div id="primary" class="content-area clr">
       <section id="content" role="main" class="site-content <?php print $sidebarclass; ?> clr">
