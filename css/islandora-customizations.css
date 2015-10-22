@@ -16,7 +16,7 @@ nav{
   word-wrap: break-word;
 }
 
-nav #edit-submit {
+nav .form-submit {
   display: none;
 }
 
@@ -28,11 +28,15 @@ nav #edit-submit {
   text-transform: uppercase;
 }
 
+.container-inline.form-wrapper {
+  float: right;
+}
+
 .front #block-system-main, .front .page-title{
   display: none;
 }
 
-.search-wrapper #edit-submit{
+.search-wrapper .form-submit{
   display: none;
 }
 
