@@ -262,39 +262,6 @@ a { outline: 0 }
 /* Widgets
 ================================================== */
 .sidebar-container select { width: 100%; }
-/* FlexSlider
-================================================== */
-/* Necessary Styles*/
-.flex-container a:active,
-.flexslider a:active,
-.flex-container a:focus,
-.flexslider a:focus  {outline: none;}
-.slides,
-.flex-control-nav,
-.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
-.flexslider {margin: 0; padding: 0;}
-.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden; margin: 0; } /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides img {width: 100%; display: block;}
-.flex-pauseplay span {text-transform: capitalize;}
-.slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
-html[xmlns] .slides {display: block;}
-* html .slides {height: 1%;}
-.no-js .slides > li:first-child {display: block;}
-/*main*/
-.flexslider-container { position: relative; }
-.flexslider-container img { display: block; }
-/*next/prev*/
-.flex-direction-nav { z-index: 9; position: absolute; bottom:0; right: 0; }
-.flex-direction-nav li { display: block; float: left; margin-left: 0; }
-.flex-direction-nav li a { display: block; height: 30px; line-height: 30px; width: 35px; text-align: center; opacity: 0.8; background: #000; color: #fff; font-size: 14px; }
-.flex-direction-nav li a:hover { opacity: 1; background: #02aace; color: #fff; text-decoration: none; }
-.flex-direction-nav li a .genericon { font-size: 16px; height: 30px; line-height: 30px; }
-/*pagination*/
-.flex-control-nav { margin-top: 20px; }
-.flex-control-nav li { display: block; float: left; }
-.flex-control-nav a { background-color: transparent; border: 0; color: #606060; background: #ddd; cursor: pointer; display: block; float: left; height: 30px; line-height: 30px; margin-right: 2px; width: 30px; text-align: center; ftext-decoration: none; }
-.flex-control-nav a:hover,
-.flex-control-nav a.flex-active { background: #02aace; color: #fff; text-decoration: none; }
 /* Homepage
 ================================================== */
 #homepage-slider-wrap { margin: -40px -30px 30px; }
@@ -308,6 +275,11 @@ html[xmlns] .slides {display: block;}
 
 /* =Content
 ----------------------------------------------- */
+.page-node #content-wrap img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: auto;
+}
 
 .node h2.title{
   font-size: 1.750em;
