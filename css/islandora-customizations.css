@@ -79,3 +79,11 @@ nav .form-submit {
 #site-navigation #main-menu > ul li {
   line-height: 55px !important;
 }
+
+#superfish-1 ul {
+  position: absolute;
+  left: -12em !important;
+}
+#block-system-main-menu ul li ul{
+  display: none;
+}
