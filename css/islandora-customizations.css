@@ -79,3 +79,7 @@ nav .form-submit {
 #site-navigation #main-menu > ul li {
   line-height: 55px !important;
 }
+
+#block-system-main-menu ul li ul{
+  display: none;
+}
