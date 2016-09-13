@@ -197,29 +197,5 @@
   </div>
   <?php endif; ?>
 
-  <footer id="copyright-wrap" class="clear">
-    <div id="copyright">
-      <span style="font-size: 10.0pt">
-      AILLA is a joint effort of the
-      <a href="http://www.utexas.edu/cola/insts/llilas/">LLILAS</a>
-      <a href="http://www.lib.utexas.edu/benson/">Benson</a>
-      Latin American Studies and Collections, the
-      <a href="http://www.utexas.edu/cola/depts/linguistics/"> Department of Linguistics</a>
-      , and the Digital Library Services Division of the
-      <a href="http://www.lib.utexas.edu/index.html">University Libraries</a>
-      at
-      <a href="http://www.utexas.edu">the University of Texas at Austin</a>
-      .
-      <br>
-      AILLA is also grateful for support from the
-      <a href="http://www.neh.gov">National Endowment for the Humanities </a>
-      and the
-      <a href="http://www.nsf.gov">National Science Foundation</a>
-.
-      <br>
-      <a href="../site/disclaimer.html">Legal Disclaimers</a>
-      |
-      <a href="image_srcs.html">Graphics sources</a>
-    </span>
-  </footer>
+
 </div>
