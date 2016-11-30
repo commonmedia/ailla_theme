@@ -28,20 +28,16 @@ $(window).load(function() {
   $(window).trigger('resize');
 
   // Custom main menu code.
-  $('#block-system-main-menu div.content > ul.menu > li').mouseenter(function() {
-    if ($(this).find("ul").css("display") == 'none') {
-      $(this).find("ul").show('fast');
+  $('#block-system-main-menu div.content > ul.menu > li').click(function(e) {
+    if ($(this).hasClass("collapsed") == true) {
+	  e.preventDefault();
       $(this).removeClass('collapsed');
+	  $(this).find("ul").show();
       $(this).addClass('expanded');
     }
+
   });
-  $('#block-system-main-menu').mouseleave(function() {
-    $('#block-system-main-menu div.content > ul.menu > li').find("ul").hide('fast');
-    $('#block-system-main-menu div.content > ul.menu').find("> li.expanded").each(function(){
-      $(this).removeClass('expanded');
-      $(this).addClass('collapsed');
-    });
-  });
+
 });
 
 })(jQuery, Drupal, this, this.document);
