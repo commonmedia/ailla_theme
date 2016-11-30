@@ -73,6 +73,19 @@ ul ul, ol ol, ul ol, ol ul {
   margin-bottom: 0;
 }
 
+body ul li.collapsed {
+    list-style-image: none;
+    list-style-type: circle;
+}
+
+body ul li.expanded {
+    list-style-image: none;
+    list-style-type: disc;
+}
+
+
+
+
 table {
   margin: 0 0 1.5em;
   width: 100%;
