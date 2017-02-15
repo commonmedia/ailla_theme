@@ -340,6 +340,11 @@ h1.page-title {
   margin: 0 0 10px;
 }
 
+.page-islandora-object fieldset , .page-islandora-object #block-system-main .islandora-object h2
+{
+  display:none !important;
+}
+
 /* Preface
 ================================================== */
 #preface-wrap { padding: 10px 0 0; }
