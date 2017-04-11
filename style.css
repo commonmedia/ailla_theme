@@ -342,7 +342,7 @@ h1.page-title {
 
 .page-islandora-object fieldset , .page-islandora-object #block-system-main .islandora-object h2
 {
-  display:none !important;
+  /*display:none !important;*/
 }
 
 /* Preface
